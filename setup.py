@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="runninglightcontrol", # Replace with your own username
+    name="runninglight", # Replace with your own username
     version="0.0.1",
     author="Example Author",
     author_email="author@example.com",

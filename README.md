@@ -4,7 +4,7 @@ A light-weight package for controlling a raspberry-pi connected LED running ligh
 ### Example code:
 
     import RPi.GPIO as GPIO
-    import runninglightcontrol
+    import runninglight
     import time
 
 
@@ -16,9 +16,9 @@ A light-weight package for controlling a raspberry-pi connected LED running ligh
     GPIO.setup(MPIN, GPIO.OUT)
 
     #create
-    rlm = runninglightcontrol.runninglightmanager(MPIN)
+    rlm = runninglight.runninglightmanager(MPIN)
 
     #run
-    rlm.set_mode(runninglightcontrol.light_mode.doubleblink_1sec)
+    rlm.set_mode(runninglight.light_mode.doubleblink_1sec)
     rlm.start()
     print("Started!")

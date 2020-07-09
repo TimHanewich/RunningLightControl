@@ -1,5 +1,5 @@
 import RPi.GPIO as GPIO
-import runninglightcontrol
+import runninglight
 import time
 
 
@@ -11,12 +11,12 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(MPIN, GPIO.OUT)
 
 #create
-rlm = runninglightcontrol.runninglightmanager(MPIN)
+rlm = runninglight.runninglightmanager(MPIN)
 
 #run
-rlm.set_mode(runninglightcontrol.light_mode.doubleblink_1sec)
+rlm.set_mode(runninglight.light_mode.doubleblink_1sec)
 rlm.start()
 print("Started!")
 time.sleep(5)
-rlm.set_mode(runninglightcontrol.light_mode.solid)
+rlm.set_mode(runninglight.light_mode.solid)
 time.sleep(60)
