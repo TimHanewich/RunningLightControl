@@ -1,4 +1,4 @@
-import gpio as GPIO
+import RPi.GPIO as GPIO
 import time
 import datetime
 import enum

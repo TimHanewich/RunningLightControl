@@ -1,4 +1,4 @@
-import gpio as GPIO
+import RPi.GPIO as GPIO
 import runninglight
 import time
 
@@ -14,7 +14,9 @@ GPIO.setup(MPIN, GPIO.OUT)
 rlm = runninglight.runninglightmanager(MPIN)
 
 #run
-rlm.set_mode(runninglight.light_mode.solid)
+rlm.set_mode(runninglight.light_mode.doubleblink_1sec)
 rlm.start()
 print("Started!")
+time.sleep(5)
+rlm.set_mode(runninglight.light_mode.solid)
 time.sleep(60)
